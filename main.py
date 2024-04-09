@@ -40,7 +40,8 @@ class User(db.Model):
     email = db.Column(db.String(100), unique=True)
     gender = db.Column(db.String(100))
     password = db.Column(db.String(100))
-    profile_photo = db.Column(db.BLOB)
+    profile_photo = db.Column(db.LargeBinary)
+    # profile_photo = db.Column(db.BLOB)
 
 class Companies(db.Model):
     id = db.Column(db.Integer, primary_key = True)
