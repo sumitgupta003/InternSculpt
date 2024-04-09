@@ -12,11 +12,13 @@ import os
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///new_users.db"
+# app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///new_users.db"
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_URI", "sqlite:///posts.db")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-app.secret_key = 's_secret'
+# app.secret_key = 's_secret'
 
+app.secret_key = 's_secret'
 
 db = SQLAlchemy()
 db.init_app(app)
@@ -383,6 +385,6 @@ def css_playlist():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
 
 
