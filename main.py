@@ -13,7 +13,7 @@ import os
 app = Flask(__name__)
 
 # app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///new_users.db"
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_URI", "sqlite:///posts.db")
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_URI", "sqlite:///new_users.db")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # app.secret_key = 's_secret'
