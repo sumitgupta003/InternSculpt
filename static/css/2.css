@@ -1,0 +1,1460 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+ 
+ }
+ 
+ body{
+    background-color: rgb(32, 38, 40);
+     
+     
+     
+ }
+ .img-1{
+     height: 100vh;
+     width: 100vw;
+     filter: brightness(25%);
+ }
+ .container{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    
+    
+  
+ }
+ .navbar{
+ position: absolute;
+ bottom: 84%;
+ 
+ }
+ .navbar ul{
+     display: flex;
+     top: 0px;
+ 
+ }
+ .navbar ul li{
+     display: flex;
+     flex-direction: column;
+     padding: 40px;
+     margin: -15px 5px;
+     top: 0px;
+ 
+ }
+ .navbar a{
+     text-decoration: none;
+     color: rgb(219, 229, 239);
+     font-size: 20px;
+ }
+ 
+ .navbar a:hover{
+     transition: ease-in;
+     transition: 0.5s;
+     color: rgb(98, 204, 240);
+     -webkit-text-stroke-color: lightskyblue;
+     -webkit-text-stroke-width: 1px;
+   
+ }
+ .btn-1{
+     background-color: rgb(237, 58, 23);
+     color: white;
+     width: 165px;
+     height: 45px;
+     border-radius: 25px;
+     position: absolute;
+     top: 30px;
+     right: 60px;
+     padding: 10px;
+     margin: 5px;
+ }
+ .left img{
+     position: absolute;
+     bottom: 75%;
+     left: -1%;
+     width: 250px;
+     height: 250px;
+ }
+ .btn-1:hover{
+     background-color: white;
+     color: black;
+ }
+ .center{
+     position: absolute;
+     bottom: 38%;
+     right: 20%;
+     color: white;
+ }
+ .center h1{
+     text-align: center;
+     font-size: 45px;
+     
+ 
+ }
+ .center p{
+     text-align: center;
+     font-size: 20px;
+     padding: 20px;
+ }
+ .services{
+     border: 2px solid black;
+     width: 100vw;
+     min-height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center; 
+ }
+  .services img{
+     width:100vw;
+     height: 100vh;
+     overflow: hidden;
+     position: relative;
+ }
+ .services h1{
+     position: absolute;
+     text-align: center;
+     bottom: -20%;
+     color: white;
+     font-size: 45px;
+     
+ 
+ }
+ .services p{
+     position: absolute;
+     text-align: center;
+     color: white;
+    bottom: -28%;
+    font-size: 20px; 
+    padding: 10px;
+ }
+ .services .box{
+     position: absolute;
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+ 
+ 
+ }
+ .box{
+    
+     width: 100%;
+     height: 70%;
+     position: relative;
+     
+ }
+ .box-1{
+     box-shadow: 10px 10px 15px 5px rgb(255, 255, 255);
+     width: 25%;
+     height: 80%;
+    position: absolute;
+    right: 70%; 
+    top: 20%;
+ }
+ .box-1 img{
+     width: 50%;
+     height:40%;
+     position: absolute;
+     right: 25%;
+     top: 5%;
+ 
+     
+ }
+ .box-1 h4{
+     position: absolute;
+     text-align: center;
+     font-size: 28px;
+     color: white;
+     right: 28%;
+     top: 50%;
+ }
+ .box-1 .btn-2{
+     background-color: rgb(237, 58, 23);
+     color: white;
+     width: 165px;
+     height: 45px;
+     border-radius: 25px;
+     position: absolute;
+     bottom: 5%;
+     padding: 10px;
+     margin: 5px;
+     right: 30%;
+ }
+ .box-1 p{
+    position: absolute;
+    bottom: 25%;
+     font-size: 15px;
+     padding: 10px;
+ }
+ .box-2{
+     top: 20%;
+     width: 25%;
+     height: 80%;
+    position: absolute;
+    right: 40%; 
+    box-shadow: 10px 10px 15px 5px rgb(255, 255, 255);
+ }
+ .box-2 img{
+     width: 50%;
+     height:40%;
+     position: absolute;
+     right: 25%;
+     top: 5%;
+     
+ }
+ .box-2 h4{
+     position: absolute;
+     text-align: center;
+     font-size: 25px;
+     color: white;
+     right: 18%;
+     top: 50%;
+ }
+ .box-2 .btn-2{
+     background-color: rgb(237, 58, 23);
+     color: white;
+     width: 165px;
+     height: 45px;
+     border-radius: 25px;
+     position: absolute;
+     bottom: 5%;
+     padding: 10px;
+     margin: 5px;
+     right: 30%;
+ }
+ .box-2 p{
+    position: absolute;
+    bottom: 25%;
+     font-size: 15px;
+     padding: 10px;
+ }
+ .box-3{
+     box-shadow: 10px 10px 15px 5px rgb(255, 255, 255);
+     width: 25%;
+     height: 80%;
+    position: absolute;
+    right: 7%; 
+    top: 20%;
+ }
+ .box-3 img{
+     width: 50%;
+     height:40%;
+     position: absolute;
+     right: 25%;
+     top: 5%;
+ }
+ .box-3 h4{
+     position: absolute;
+     text-align: center;
+     font-size: 28px;
+     color: white;
+     right: 35%;
+     top: 50%;
+ }
+ .box-3 .btn-2{
+     background-color: rgb(237, 58, 23);
+     color: white;
+     width: 165px;
+     height: 45px;
+     border-radius: 25px;
+     position: absolute;
+     bottom: 5%;
+     padding: 10px;
+     margin: 5px;
+     right: 30%;
+ }
+ .box-3 p{
+    position: absolute;
+    bottom: 25%;
+     font-size: 15px;
+    padding: 10px;
+ }
+ .btn-2:hover
+     {
+         background-color: white;
+         color: black;
+     }
+  /*Login Form Css */
+  *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     user-select: none;
+ 
+  }
+ 
+  .student-login{
+      width: 100%;
+     height: 100%;
+     background-image:url('../assets/img/girl-5662435_1280.jpg');
+     background-position:center;
+     background-repeat: no-repeat;
+     background-size: cover; 
+     position: absolute;
+ }
+  .stu-h1{
+     text-align: center;
+  }
+ 
+  .container-3{
+      border:2px solid transparent;
+      text-align: center;
+      height: 73%;
+      width: 30%;
+      position: absolute;
+      right: 35%;
+      top: 20%;
+      box-shadow: 2px 2px 5px 10px rgb(209, 210, 207);
+     
+    
+  }
+  .label{
+     position: absolute;
+     right: 62%;
+  }
+  .label-1{
+     right: 70%;
+     position: absolute;
+  }
+  .label-2{
+ position: absolute;
+ right: 76%;
+  }
+  .input{
+     margin: 2px;
+     width: 70%;
+     height: 7%;
+  }
+  #labels{
+     font-size: medium;
+     font-weight: 700;
+  }
+ .forget{
+  position: absolute;
+  bottom: 9.5%;
+  left: 41.5%;
+ }
+ .btn-3{
+  cursor: pointer;
+  border: 0;
+  border-radius: 4px;
+  font-weight: 600;
+  margin: 0 10px;
+  width: 200px;
+  padding: 10px 0;
+  box-shadow: 0 0 20px rgba(104, 85, 224, 0.2);
+  transition: 0.4s;
+ }
+ .btn-4:hover{
+  color: white;
+box-shadow: 0 0 20px rgba(104, 85, 224, 0.6);
+background-color: rgba(104, 85, 224, 1);
+}
+.btn-3:hover{
+  color: white;
+  box-shadow: 0 0 20px rgba(104, 85, 224, 0.6);
+  background-color: rgba(104, 85, 224, 1);
+}
+
+ .btn-4{
+  color: white;
+  background-color: rgba(104, 85, 224, 1);
+  cursor: pointer;
+    border: 0;
+    border-radius: 4px;
+    font-weight: 600;
+    margin: 0 10px;
+    width: 100px;
+    padding: 10px 10px;
+    box-shadow: 0 0 20px rgba(104, 85, 224, 0.2);
+    transition: 0.4s;
+ }
+ .forget-pass{ 
+  color: rgb(248, 3, 3);
+  padding: 5px;
+  margin: 5px;
+  font-size: 22px;
+ text-shadow:0px 1px, 1px 0px, 1px 1px;
+  text-decoration: none;
+    }
+ .links{
+  position: absolute;
+  bottom:20.5%;
+  left: 46%;
+  font-size: 18px;
+  font-weight:bolder;
+  color: rgb(9, 9, 9);  
+ }
+ .Gmail{
+  box-sizing: border-box;
+   width: 20em;
+  margin: 0.2em;
+  border: none;
+  text-align: center;
+  line-height: 40px;
+  white-space: nowrap;
+  border-radius: 0.2em;
+  font-size: 16px;
+  color: #FFF;
+ 
+
+}
+.facebook{
+box-sizing: border-box;
+width: 20em;
+margin: 0.2em;
+border: none;
+text-align: center;
+line-height: 40px;
+white-space: nowrap;
+border-radius: 0.2em;
+font-size: 16px;
+color: #FFF;
+
+}
+#facebook {
+background-color: #4C69BA;
+background-image: linear-gradient(#4C69BA, #3B55A0);
+/*font-family: "Helvetica neue", Helvetica Neue, Helvetica, Arial, sans-serif;*/
+text-shadow: 0 -1px 0 #354C8C;
+position: absolute;
+bottom: 23%;
+left: 40%;
+width: 8em;
+}
+
+#facebook::before{
+border-right: #364e92 1px solid;
+background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png') 6px 6px no-repeat;
+}
+#facebook:hover{
+background: #3e61a8;
+}
+.facebook,.Gmail b{
+  font-size: 17px;  
+  position: absolute; 
+  bottom: 15%;
+  left: 30%;
+}
+#Gmail:hover{
+  background: #df2060;
+
+}
+.facebook  b span{
+margin-left: 8px;
+font-weight: 500;
+letter-spacing: 1px;
+font-size: 16px;
+font-family: 'Poppins',sans-serif;
+}
+#Gmail{
+background: #DD4B39;
+position: absolute;
+bottom: 15.5%;
+left: 52%;
+width: 8em;
+
+}
+.fb{
+width: 25px;
+height: 25px;
+position: absolute;
+top: 7px;
+left: 6px;
+}
+.gm{
+position: absolute;
+width: 25px;
+height: 25px;
+position: absolute;
+top: 7px;
+left: 10px;
+}
+.Gmail b span{
+margin-left: 8px;
+font-weight: 500;
+letter-spacing: 2px;
+font-size: 16px;
+font-family: 'Poppins',sans-serif;
+}
+  .gradient-background  { 
+   width: 100vw;
+   position: relative;
+    height: 70vh;
+    background: linear-gradient(300deg, #eaff00, #ff4c4c, #ff935a);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+}   
+  .inter{
+    position: absolute;
+    width: 550px;
+    height: 350px;
+    left: 55%;
+    top: 15%;
+  }
+  .headings{
+    position: absolute;
+    top: 20%;
+    left: 10%;
+  }
+  .headings h1{
+    font-size: 40px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    margin: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  .headings h4{
+    top: 35%;
+    letter-spacing: 0.5px;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  @keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+       
+  
+  /*new css */
+  .courses{
+    width: 100vw;
+    height: 100vh;
+    background-color: aliceblue; 
+  }
+  .courses h1{
+     text-align: center;
+     font-size: 45px;
+
+  }
+  .courses-1{
+     display: flex;
+   width: 60vw;
+   height: 60vh;
+   flex-direction: row;
+   margin: 40px;
+    padding: 30px;
+   
+  }
+  .courses-1-a{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 30vw;
+    height: 60vh;
+    margin: 40px;
+    padding: 15px;
+    background-color: #FFF;
+    
+  }
+  .img-5{
+    border-radius: 10px;
+    width:355px;
+    height: 250px;
+    
+  }
+  .courses-1-a h5{
+    text-align: left;
+    letter-spacing: 1.5px;
+     margin: 5px;
+     padding: 5px;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .courses-1-a h2{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+     margin-top: -20px;
+     margin-left: 10px;
+     letter-spacing: 0.5px;
+
+  }
+  .img-6{
+    width: 20px;
+    height: 20px;
+
+  }
+  .img-7{
+    width: 20px;
+    height: 20px;
+  }
+  .begin{
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+
+  }
+  .begin h5{
+    letter-spacing: 1px;
+    padding: -10px;
+    margin-top: -7px;
+  }
+  .img-7{
+    margin-bottom: 5px;
+    margin-right: -5px;
+
+  }
+  .reviews-1 h4{
+    color: #f8db00;
+    letter-spacing: 2px;
+    margin-top: 40px;
+    margin-left: 90px;
+
+  }
+  .reviews-1 h1{
+    font-size: 45px;
+    margin-top: 15px;
+    margin-left: 90px;
+  }
+  .btn-6{
+    left: 85%;
+    position: absolute;
+    border-radius: 20px;
+    margin: -10px;
+    padding: 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:blue;
+    border-color: blue;
+  }
+  .btn-6:hover{
+    background-color: #ffe100eb;
+    color: black;
+    transition: ease-in 0.5s;
+  }
+  /* .reviews-2{
+    display: flex;
+
+  } */
+  .reviews-2-a{
+    display: flex;
+    flex-direction: row;
+    height: 50vh;
+    width: 100vw;
+    justify-content: space-around;
+
+  }
+  .a{
+    background-color: whitesmoke;
+    border-radius: 20px;
+    border: 0.5px white;
+    width: 38%;
+    height: 70%;
+    margin-top: 50px;
+    margin-left: 20px;
+
+  }
+  .a-1{
+    position: absolute;
+    border-radius: 20px;
+
+  }
+  .a h5{
+    margin-top: 80px;
+    margin-left: 78px;
+
+  }
+  .a h6{
+    margin-left: 80px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .a-2{
+    position: absolute;
+    border-radius: 20px;
+
+  }
+  .reviews-2-b{
+    display: flex;
+    flex-direction: row;
+    height: 50vh;
+    width: 100vw;
+    justify-content: space-around; 
+  }
+  .b-1{
+    position: absolute;
+    border-radius: 20px;
+  }
+  .b-2{
+    position: absolute;
+    border-radius: 20px;
+  }
+  .content-1{
+    width: 100vw;
+   position: relative;
+    height: 70vh;
+    background: linear-gradient(300deg, #eaff00, #ff4c4c, #ff935a);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+  }
+  .content-1 h6{
+    margin-top: 200px;
+  }
+
+
+  /* Footer Css Of testemonials */
+  .last{
+    height: 60vh;
+    width: 100vw;
+    background-color: rgb(31, 32, 34);
+    display: flex;
+    flex-direction: row;
+    overflow-y:hidden ;
+
+
+  }
+  .last h1{
+    color: white;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: 20px;
+
+  }
+  .last-1,.last-2, .last-3, .last-4 ,.last-5{
+    padding: 45px;
+  }
+  .last-1 p,h6{
+    color: white;
+    margin-top: 30px;
+    margin-left:20px;
+
+  }
+  .last-1 h6{
+    color: blue;
+  }
+  .last-4 p{
+    color: white;
+    margin-left: 23px;
+  }
+  .last-4 input{
+    margin-left: 20px;
+    width: 220px;
+
+  }
+
+
+  .last-5 h6{
+    font-size: 15px;
+     padding-left: 48px;
+     color: white;
+    margin-top: -24px;
+    cursor: pointer;
+    text-decoration: none;
+
+  }
+  .last-5 img{
+    width: 30px;
+    height: 30px;
+    margin-left: 30px;
+  }
+  .last-4 img{
+    width: 30px;
+    height: 30px;
+   margin-left: 5px;
+   margin-bottom: 5px;
+  }
+ 
+
+  .chatbot-button {
+    position:fixed;
+    bottom: 40px;
+    right: 60px;
+    background-color: rgb(237, 58, 23); /* Button background color */
+    color: #fff; /* Button text color */
+    text-decoration: none;
+    border: 3px solid wheat;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.chatbot-button:hover {
+    background-color: rgb(129 31 209); 
+    
+    transform: scale(1.05,1.05);
+}
+
+
+
+
+ /* Company Details */
+ .filters{
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: whitesmoke;
+ display: flex;
+ flex-direction: row;
+ }
+
+ .filter-1{
+     width:400px ;
+     height: 70%;
+     border: 1px solid black;
+
+ }
+ .filter-1 h2{
+   text-align: center;
+   margin-top: 20px;
+
+ }
+ .filter-1 h4{
+  margin-top: 10px;
+  padding-left: 15px;
+ }
+ .label-6{
+  margin-left: 15px;
+  margin-top: 10px;
+  position: absolute;
+  font-weight: 900;
+
+
+ }
+ .location,#industry,#job,#reviews,#size{
+  padding: 5px;
+  margin-left: 15px;
+  margin-top: 15px;
+  width: 300px;
+  margin-bottom: 5px;
+
+ }
+ .label-7{
+  margin-left: 15px;
+  margin-top: 10px;
+  position: absolute;
+  font-weight: 900;
+ }
+ .label-8{
+  margin-left: 15px;
+  margin-top: 10px;
+  position: absolute;
+  font-weight: 900;
+ }
+ .label-9{
+
+ 
+ margin-left: 15px;
+ margin-top: 10px;
+ position: absolute;
+ font-weight: 900;
+ }
+ #reviews img{
+  width: 80px;
+  height: 80px;
+  position: absolute;
+ }
+ .label-10{
+
+ 
+  margin-left: 15px;
+  margin-top: 10px;
+  position: absolute;
+  font-weight: 900;
+  }
+.btn-15{
+  background-color: rgb(34, 201, 70);
+  margin-left: 100px;
+  margin-top: 20px;
+  padding: 5px;
+  width: 140px;
+  font-weight: 900;
+
+}
+.filter-2{
+  border: 1px solid black;
+  width: 1130px;
+  height: 100%;
+  overflow: scroll;
+  
+}
+.filter-2a{
+  height: 34%;
+  width: 1050px;
+  border: 1px solid black;
+  margin-left: 35px;
+  margin-top: 20px;
+  background-color: white;
+}
+.filter-2a img{
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 70px;
+  height: 70px;
+}
+.filter-2a h2{
+  margin-left: 100px;
+  margin-top: -70px;
+}
+.filter-2a h4{
+ margin-left: 110px;
+ margin-top: 3px;
+}
+.filter-2a h4 img{
+    width: 15px;
+    height: 15px;
+    margin-left: -3px;
+    margin-top: 5px;
+
+}
+.filter-2a p{
+  margin-top: 35px;
+  margin-left: 13px;
+  font-weight: 900;
+  font-size: medium;
+}
+.filter-2a h5{
+  margin-top: -10px;
+  margin-left: 20px;
+  font-weight: 100;
+
+}
+.filter-2a:hover{
+  cursor: pointer;
+  box-shadow: 5px 5px 5px 3px black;
+}
+.count h5{
+   margin-top: -10px;
+  margin-left: 250px;
+  font-weight: 100;
+}
+.count p{
+  margin-top: -43px;
+  margin-left: 200px;
+  font-weight: 900;
+  font-size: medium;
+}
+.industry p{
+  margin-top: -43px;
+  margin-left: 500px;
+  font-weight: 900;
+  font-size: medium;
+}
+.industry h5{
+  margin-top: -10px;
+  margin-left: 470px;
+  font-weight: 100;
+}
+.discreption p{
+  margin-top: -13px;
+  margin-left: 300px;
+  font-weight: 900;
+  font-size: medium;
+}
+.discreption h4{
+  margin-top: -39px;
+  margin-left: 290px;
+  font-weight: 500;
+}
+.review-section p{
+  margin-top: -41px;
+  margin-left: 700px;
+  font-weight: 900;
+  font-size: medium;
+}
+.review-section h5{
+  margin-top: 10px;
+  margin-left: 690px;
+  font-weight: 100;
+}
+.job-title p{
+  margin-top: -45px;
+  margin-left: 900px;
+  font-weight: 900;
+  font-size: medium;
+}
+.job-title h5{
+  margin-top: 10px;
+  margin-left: 870px;
+  font-weight: 100;
+}
+
+
+/* dashboard */
+
+.dashboard{
+  width: 100vw;
+  height: 100vh;
+  background-color:#eee;
+  display: flex;
+  flex-direction: row;
+}
+.dash-1{
+  width: 20%;
+  height: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+
+}
+.dash-profile{
+  margin-left: 85px;
+  margin-top: 30px;
+  width: 110px;
+  height: 95px;
+
+}
+.dash-1 h2{
+    margin-left: 65px;
+    font-size: 25px;
+    margin-top: 16px;
+
+
+}
+.dash-1 h4{
+  margin-left: 90px;
+  font-size: 18px;
+  margin-top: 3px;
+ font-weight: 400;
+}
+.btn-20{
+  position: absolute;
+  background-color: #8e44ad;
+  color: white;
+  width: 260px;
+  height: 43px;
+  border: 2px solid ;
+  margin-left: 15px;
+  text-decoration: none;
+  border-radius: 6px;
+  padding: 10px;
+  top: 205px;
+  text-align: center;
+
+}
+.btn-20:hover{
+  background-color: #2c3e50;
+}
+.dash-1-a{
+  border: 1px solid black;
+  height: 260px;
+
+}
+
+.dash-navbar{
+ text-align: left;
+ 
+}
+.nav-image{
+  width: 22px;
+  height: 22px;
+  margin-left: 72px;
+  margin-top: 55px;
+ 
+}
+.nav-3{
+  
+ padding: 5px;
+  margin-left: 10px;
+  font-size: 25px;
+  text-decoration: none;
+  
+  
+}
+.dash-2{
+  width: 79%;
+  height: 98%;
+  border: 1px solid black;
+  margin-top: 10px;
+  margin-left: 10px;
+ border-radius: 10px;
+}
+.dash-2 h2{
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.dash-2 hr{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.dash-2-container{
+  background-color: white;
+  width: 1100px;
+  height: 520px;
+  margin-top: 70px;
+  margin-left: 60px;
+}
+.dash-2-a img{
+  margin-top: 50px;
+  margin-left: 500px;
+
+}
+.dash-2-a h3{
+  margin-left: 492px;
+  margin-top: 6px;
+  font-size: 25px;
+
+}
+.dash-2-a h4{
+  margin-left: 530px;
+  margin-top: 3px;
+  font-size: 15px;
+}
+.btn-21{
+  position: absolute;
+  background-color: #8e44ad;
+  color: white;
+  width: 260px;
+  height: 43px;
+  border: 2px solid ;
+ 
+  text-decoration: none;
+  border-radius: 6px;
+  padding: 10px;
+  top: 417px;
+  text-align: center;
+  left: 860px;
+}
+.dash-2-b{
+  width: 70%;
+  height: 100px;
+}
+.dash-2-container-2{
+  display: flex;
+  margin-top: 50px;
+  margin-left: 60px;
+  
+}
+.dash-2-b1{
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #eee;
+  padding: 20px;
+  width: 30%;
+  height: 140px;
+  margin-left: 15px;
+  margin-top: 40px;
+
+}
+.dash-2-img1{
+  width: 40px;
+  height: 40px;
+
+}
+.dash-2-b1 h3{
+  margin-left: 60px;
+  margin-top: -40px;
+}
+.dash-2-b1 h5{
+  margin-left: 60px;
+  margin-top: 6px;
+}
+.btn-22{
+  position: absolute;
+  background-color: #8e44ad;
+  color: white;
+  width: 260px;
+  height: 43px;
+  border: 2px solid ;
+ top: 565px;
+  text-decoration: none;
+  border-radius: 6px;
+  padding: 10px;
+   
+  text-align: center;
+
+}
+.dash-3{
+  width: 79%;
+  height: 98%;
+  border: 1px solid black;
+  margin-top: 10px;
+  margin-left: 60px;
+ border-radius: 10px;
+ 
+}
+.dash-3 h2{
+    margin-top: 20px;
+    margin-left: 520px;
+  }
+.dash-3 hr{
+ 
+    margin-left: 20px;
+    margin-right: 20px;
+ 
+}
+.update{
+  font-size: 15px;
+  color: #2c3e50;
+  border-radius: .5rem;
+  
+  background-color: #eee;
+  width: 400px;
+  height: 35px;
+  text-align: center;
+  margin-left: 35px;
+  margin-top: 45px;
+}
+
+.dash-3-container{
+  background-color: white;
+  width: 500px;
+  height: 630px;
+  margin-top: 30px;
+  margin-left: 350px;
+  overflow: hidden;
+}
+.label-11{
+ position: absolute;
+ top: 100px;
+ left: 740px;
+ font-size: 20px;
+
+}
+.label-12{
+  position: absolute;
+ top: 180px;
+ left: 740px;
+ font-size: 20px;
+}
+.label-13{
+  position: absolute;
+  top: 260px;
+  left: 740px;
+  font-size: 20px;
+}
+.label-14{
+  position: absolute;
+  top: 340px;
+  left: 740px;
+  font-size: 20px;
+}
+.label-15{
+  position: absolute;
+  top: 420px;
+  left: 740px;
+  font-size: 20px;
+}  
+.update-1{
+  font-size: 20px;
+  color: #2c3e50;
+  border-radius: .5rem;
+  border: 0.1rem solid black;
+  background-color: #eee;
+  width: 400px;
+  height: 35px;
+  
+  margin-left: 35px;
+  margin-top: 45px;
+}
+.btn-24{
+  position: absolute;
+  background-color: #8e44ad;
+  color: white;
+  width: 300px;
+  height: 43px;
+  border: 2px solid ;
+ top: 524px;
+  text-decoration: none;
+  border-radius: 6px;
+  padding: 10px;
+   left: 800px;
+  text-align: center;
+
+}
+.dark{
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 25px;
+  right: 40px;
+}
+
+
+
+/*  Job Position and detaisl */
+.job-container{
+  background-color:#eee;
+  width: 1500px;
+  height: 710px;
+  margin-left: 20px;
+  font-family: "Rubik",sans-serif;
+
+}
+.job-container h2{
+  font-size: 30px;
+  
+  padding-left: 20px;
+}
+.job-1{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+.job-1-a img{
+  width: 60px;
+  height: 40px;
+}
+.job-1-a{
+  box-shadow: 0 4px 24px -8px rgba(2, 40, 71, 0.2);
+  padding: 16px;
+  width: 450px;
+  border-radius: 16px;
+  transition: all 400ms ease;
+  margin-left: 30px;
+  height: 250px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+.job-1-a:hover{
+
+  transition: scale(1.03s);
+  box-shadow: 5px 5px 5px 10px rgb(209, 209, 209);
+}
+.position-number{
+  position: absolute;
+  top: 40px;
+  right: 24px;
+  color: #e63946;
+}
+.job-1-a h3{
+  font-size: 20px;
+  padding: 10px;
+  margin: 0;
+  color: #023047;
+}
+.job-details{
+  margin-top: 6px;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.8;
+  flex: 1;
+}
+.details-btn{
+ text-decoration: none;
+ border: 1px solid #023047;
+ color: #000;
+ padding: 8px 16px;
+ text-align: center;
+ margin-top: 20px
+}
+.details-btn:hover{
+  background-color: #023047;
+  color: white;
+  transition: all 400ms ease;
+}
+
+.body{
+  background-color: #eee;
+}
+.job-search{
+  width: 80%;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-family: "Rubik";
+  box-sizing: border-box;
+  border: 1px solid #333;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  margin-left: 140px;
+  margin-top: 10px;
+}
+
+/* job description */
+.job-description{
+  width:100% ;
+  background-color: #eee;
+ height: 728px;
+}
+.job-page{
+  background-color: white;
+  width: 50%;
+  height: 70%;
+  margin-left: 400px;
+  position: absolute;
+  top: 70px;   
+  border-radius: 10px;
+}
+.job-page img{
+ width: 80px;
+ height: 60px; 
+ margin-left: 40px;
+ margin-top: 20px;
+}
+.job-page h2{
+  margin-left: 40px;
+  margin-top: 7px;
+  font-size: 25px;
+}
+.descrip{
+  margin-left: 40px;
+  word-spacing: 0.3px;
+  margin-top: 8px;
+  margin-right: 20px;
+
+}
+.qualification{
+  margin-left: 40px;
+  margin-top: 10px;
+
+}
+.quali{
+  font-size: 18px;
+  font-weight: 900;
+  margin-top: 10px;
+
+}
+.g1{
+ font-weight: 300;
+ position: absolute;
+ top: 177px;
+ left: 180px;
+ font-size: 15px;
+}
+.g2{
+  font-weight: 300;
+  position: absolute;
+  top: 207px;
+  left: 180px;
+  font-size: 15px;
+}
+.g3{
+  font-weight: 300;
+  position: absolute;
+  top: 237px;
+  left: 180px;
+  font-size: 15px;
+}
+.job-requirement{
+  margin-top: 10px;
+  margin-left: 40px;
+
+}
+.job-requirement p{
+  margin-top: 8px;
+  word-spacing: 0.3px; 
+  margin-right: 20px;
+}
+
+
+.contact-details h3{
+  font-size: 18px;
+  font-weight: 900;
+  margin-top: 10px;
+}
+.job-page:hover{
+  transition: all 400ms ease;
+  box-shadow: 5px 5px 5px 5px rgb(196, 184, 184);
+}
+
+.job-description img{
+  width: 40px;
+  height: 40px;
+  margin-left: 40px;
+  margin-top: 40px;
+}

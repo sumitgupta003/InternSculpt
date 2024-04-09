@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/2.css')}}">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="dash-1">
+            <div class="dash-1-a">
+          <img src="{{profile}}" class="dash-profile" alt="" style="border-radius: 30%;">
+          <h2>{{name}}</h2>
+          <h4>(Student)</h4>
+          <a href="" class="btn-20">View Profile</a> 
+          </div>
+          <br>
+          <br>
+          <div class="dash-1-b">
+          <div class="dash-navbar">
+           <img src="../static/assets/img/home.png" class="nav-image" alt=""><a href="" class="nav-3">Home</a>
+           <br>
+            <img src="../static/assets/img/phone.png" class="nav-image"  alt=""> <a href="1.html" class="nav-3">Contact</a>
+           <br>
+             <img src="../static/assets/img/computer.png"  class="nav-image"   alt=""><a href="courses.html" class="nav-3">Courses</a>
+           <br>
+            <img src="../static/assets/img/rating.png" class="nav-image"   alt=""> <a href="Testimonials and footer.html" class="nav-3">Testimonials</a>
+           <br>
+          </div>
+          </div>
+
+        </div>
+        <div class="dash-2">
+             <h2>Your Profile</h2>+
+             <br>
+             <hr>
+             <div class="dash-2-container">
+             <div class="dash-2-a">
+              <img src="{{profile}}" class="dash-2-a-image" alt="" height="80px" width="80px" style="border-radius: 50%;">
+              <h3>{{name}}</h3>
+              <h3>Email: {{email}}</h3>
+              <h3>Contact: {{number}}</h3>
+              <form id="details" action="/update_profile" method="post">
+                <input type="hidden" name="user_name" id="user_up_name">
+                <input type="hidden" name="user_email" id="user_up_email">
+                <input type="hidden" name="user_number" id="user_up_number">
+                <input type="hidden" name="user_profile" id="user_up_profile">
+                <a href="#" onclick="user_up_details('{{name}}', '{{email}}', '{{number}}', '{{profile}}');
+                document.getElementById('details').submit(); return false;" class="btn-21">Update Profile</a>
+              </form>
+              
+             </div>
+              <div class="dash-2-container-2">
+              <div class="dash-2-b1">
+                <img src="../static/assets/img/music-album.png" class="dash-2-img1" alt="">
+                <h3>4</h3>
+                <h5>Saved Playlist</h5>
+                <a href="playlist.html" class="btn-22">View Playlist</a>
+              </div>
+              <br>
+              <div class="dash-2-b1">
+                <img src="../static/assets/img/like.png" class="dash-2-img1" alt="">
+                <h3>33</h3>
+                <h5>Video Liked</h5>
+                <a href="playlist-3.html" class="btn-22">View Like</a>
+              </div>
+              <div class="dash-2-b1">
+                <img src="../static/assets/img/chat.png" class="dash-2-img1" alt="">
+                <h3>13</h3>
+                <h5>Video Comment</h5>
+                <a href="Testimonials and footer.html" class="btn-22">View Comment</a>
+              </div>
+             </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- <form id="details" action="/update_profile" method="post">
+    <input type="hidden" name="user_name" id="user_up_name">
+    <input type="hidden" name="user_email" id="user_up_email">
+    <input type="hidden" name="user_number" id="user_up_number">
+  </form> -->
+
+  <script>
+  function user_up_details(name, email, number, profile){
+        console.log("Name:", name);
+        console.log("Email:", email);
+        console.log("Number:", number);
+    document.getElementById('user_up_name').value = name
+    document.getElementById('user_up_email').value = email
+    document.getElementById('user_up_number').value = number
+    document.getElementById('user_up_profile').value = profile
+    // document.getElementById('details').submit()
+  }
+  </script>
+</body>
+</html>

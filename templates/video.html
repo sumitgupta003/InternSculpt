@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>Video Conferencing </h1>
+    <link rel="stylesheet" href="import @whereby.com/browser-sdk">
+
+</head>
+<body>
+    <whereby-embed room="https://subdomain.whereby.com/your_room?roomKey=3fe345a"></whereby-embed>
+</body>
+<script>
+    const MyComponent = ({ roomUrl }) => {
+    return <whereby-embed room={roomUrl} />
+}
+
+export default MyComponent
+const whereby = document.querySelector("whereby-embed");
+let participantCount = 0
+
+function logEvent(event) {
+    participantCount = event.detail.count
+  }
+  
+room.addEventListener("participantupdate", logEvent)
+const room = document.querySelector("whereby-embed");
+
+room.addEventListener("leave", () => location.href = "https://whereby.com")
+
+if(participantCount <= 200){
+  whereby.room = "https://subdomain.whereby.com/roomname-123"
+} else {
+  whereby.room = "https://subdomain.whereby.com/roomname-123?roomKey=xyz..."
+} 
+
+
+
+
+</script>
+</html>

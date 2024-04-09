@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/2.css')}}">
+    
+</head>
+<body>
+  
+    <div class="filters"> 
+              <div class="filter-1">
+                       <h2>Filter Companies</h2>
+                       <h4>Showing <b>16-20</b> of <b>788 </b> Companies sorted by relevancy</h4>
+                       <hr>
+                       <form action="">
+                        <label for="" class="label-6">Location</label>
+                       <br>
+                        <input type="text" class="location" placeholder="Indore">
+                        <hr>
+                        <label for="" class="label-7">Industries</label>
+                        <br>
+                        <select name="industry" id="industry" onchange="navigate1()">
+                            
+                            <option value="1.html">Information Technology</option>
+                            <option value="1">Information Technology Support</option>
+                            <option value="1">Software Development</option>
+                            <option value="1">Management & Administration</option>
+                            <option value="1">Civil & Social Services</option>
+
+                          
+
+                        </select>
+                        <hr>
+                        <label for="" class="label-8">Job title</label>
+                        <br>
+                        <select name="job" id="job" onchange="navigate3()">
+                            
+                            <option value="courses.html" >Web Development</option>
+                            <option value="1.html">Software Development</option>
+                            <option value="3">Android Development</option>
+                            <option value="4">Digital Marketing</option>
+                            <option value="5">Web Designing</option>
+
+
+
+                        </select>
+              <hr>
+              <label for="" class="label-9">Reviews</label>
+              <br>
+              <select name="job" id="reviews" onchange="navigate()">
+                  
+                  <option value="5star.html"> 5 Star Ratings  </option> 
+                  <option value="4star.html"> 4 Star Ratings </option>
+                  <option value="3star.html"> 3 Star Ratings </option>
+                  <option value="2star.html"> 2 Star Ratings </option>
+                  <option value="1star.html"> 1 Star Ratings </option>
+
+
+
+              </select>
+    <hr>
+    <label for="" class="label-10">Company Employes Count</label>
+    <br>
+    <select name="job" id="size" onchange="openpage()">
+        
+        <option value="5star.html">  1000-10000</option>
+        <option value="4star.html"> 500-1000</option>
+        <option value="3star.html"> 100-500</option>
+        <option value="2star.html"> 10-100</option>
+        <option value="1star.html"> 0-10 </option>
+
+
+
+    </select>
+<hr>  
+                       <button class="btn-15">Apply Filters</button>
+                       </form>
+                       
+              </div>
+              <div class="filter-2">
+                     <div class="filter-2a">
+                        <img src="TCS.png" alt="">
+                        <h2>Tata Consultancy Services</h2>
+                        <h4>5 <img src="star.png" alt=""></h4>
+                        <br>
+                        <p>Location</p>
+                        <br>
+                        <h5>Indore</h5>
+                        <div class="count">
+                            <p>Company Employee Count</p>
+                            <br>
+                            <h5>10000+</h5>
+                        </div>
+                        <div class="industry">
+                            <p>Industry</p>
+                            <br>
+                            <h5>IT Services and Consulting</h5>
+                        </div>
+                        <div class="discreption">
+                            <h4>
+                                Tata Consultancy Services is an IT services, consulting and business solutions organization that has been partnering with many of the world’s largest businesses for the past 50 years.
+                            </h4>
+                        </div>
+                        <div class="review-section">
+                            <p>Reviews</p>
+                            <h5>5 Star Ratings</h5>
+                        </div>
+                        <div class="job-title">
+                            <p>Job</p>
+                            <h5>
+                                Software Development
+                            </h5>
+                        </div>
+                     </div>
+                     <div class="filter-2a">
+                        <img src="YASH.png" alt="">
+                        <h2>YASH Technologies</h2>
+                        <h4>5 <img src="star.png" alt=""></h4>
+                        <br>
+                        <p>Location</p>
+                        <br>
+                        <h5>Indore</h5>
+                        <div class="count">
+                            <p>Company Employee Count</p>
+                            <br>
+                            <h5>10000+</h5>
+                        </div>
+                        <div class="industry">
+                            <p>Industry</p>
+                            <br>
+                            <h5> IT Services and Consulting</h5>
+                        </div>
+                        <div class="discreption">
+                            <h4>   
+                                YASH Technologies is a leading systems integrator and outsourcing partner that focuses on empowering its customers to drive enterprise-wide business transformation at scale.
+                            </h4>
+                        </div>
+                        <div class="review-section">
+                            <p>Reviews</p>
+                            <h5>5 Star Ratings</h5>
+                        </div>
+                        <div class="job-title">
+                            <p>Job</p>
+                            <h5>
+                                QA Testing
+                            </h5>
+                        </div>
+                     </div>
+                     <div class="filter-2a">
+                        <img src="DXC.png" alt="">
+                        <h2>DXC Technology</h2>
+                        <h4>5 <img src="star.png" alt=""></h4>
+                        <br>
+                        <p>Location</p>
+                        <br>
+                        <h5>Indore</h5>
+                        <div class="count">
+                            <p>Company Employee Count</p>
+                            <br>
+                            <h5>10000+</h5>
+                        </div>
+                        <div class="industry">
+                            <p>Industry</p>
+                            <br>
+                            <h5>IT Services and Consulting</h5>
+                        </div>
+                        <div class="discreption">
+                            <h4>
+                                DXC Technology helps global companies run their mission-critical systems and operations while modernizing IT and ensuring security and scalability across public, private and hybrid clouds.                                
+                            </h4>
+                        </div>
+                        <div class="review-section">
+                            <p>Reviews</p>
+                            <h5>5 Star Ratings</h5>
+                        </div>
+                        <div class="job-title">
+                            <p>Job</p>
+                            <h5>
+                                IT Infrastrusture Analyst
+                            </h5>
+                        </div>
+                     </div>
+
+                     <div class="filter-2a">
+                        <img src="InfoBeans.png" alt="">
+                        <h2>InfoBeans</h2>
+                        <h4>5 <img src="star.png" alt=""></h4>
+                        <br>
+                        <p>Location</p>
+                        <br>
+                        <h5>Indore</h5>
+                        <div class="count">
+                            <p>Company Employee Count</p>
+                            <br>
+                            <h5>10000+</h5>
+                        </div>
+                        <div class="industry">
+                            <p>Industry</p>
+                            <br>
+                            <h5>IT Services and Consulting</h5>
+                        </div>
+                        <div class="discreption">
+                            <h4>
+                                InfoBeans enable innovation, rapid prototyping and at-scale implementation for your enterprise
+                                Whether you want to stay at the forefront of innovation, or simply solve a challenging problem for your enterprise.
+                            </h4>
+                        </div>
+                        <div class="review-section">
+                            <p>Reviews</p>
+                            <h5>5 Star Ratings</h5>
+                        </div>
+                        <div class="job-title">
+                            <p>Job</p>
+                            <h5>
+                                Associate Software Engineer
+                            </h5>
+                        </div>
+                     </div>
+                     <div class="filter-2a">
+                        <img src="Impetus.png" alt="">
+                        <h2>Impetus Technologies</h2>
+                        <h4>5 <img src="star.png" alt=""></h4>
+                        <br>
+                        <p>Location</p>
+                        <br>
+                        <h5>Indore</h5>
+                        <div class="count">
+                            <p>Company Employee Count</p>
+                            <br>
+                            <h5>10000+</h5>
+                        </div>
+                        <div class="industry">
+                            <p>Industry</p>
+                            <br>
+                            <h5>IT Services and Consulting</h5>
+                        </div>
+                        <div class="discreption">
+                            <h4>
+                                From building the right architecture to optimizing costs, we help businesses of all sizes and needs to develop the system that’s made for their business not the other way around.
+                            </h4>
+                        </div>
+                        <div class="review-section">
+                            <p>Reviews</p>
+                            <h5>5 Star Ratings</h5>
+                        </div>
+                        <div class="job-title">
+                            <p>Job</p>
+                            <h5>
+                                Senior UI Engineer
+                            </h5>
+                        </div>
+                     </div>
+
+                     <div class="filter-2a">
+                        <img src="Deqode.png" alt="">
+                        <h2>Deqode</h2>
+                        <h4>5 <img src="star.png" alt=""></h4>
+                        <br>
+                        <p>Location</p>
+                        <br>
+                        <h5>Indore</h5>
+                        <div class="count">
+                            <p>Company Employee Count</p>
+                            <br>
+                            <h5>10000+</h5>
+                        </div>
+                        <div class="industry">
+                            <p>Industry</p>
+                            <br>
+                            <h5>
+                                IT Services and Consulting</h5>
+                        </div>
+                        <div class="discreption">
+                            <h4>
+                                provides industry-leading audit and assurance, tax and legal, consulting, financial advisory, and risk advisory services to nearly 90% of the Fortune Global 500® and thousands of private companies. Our more than 412,000+ ..
+                            </h4>
+                        </div>
+                        <div class="review-section">
+                            <p>Reviews</p>
+                            <h5>5 Star Ratings</h5>
+                        </div>
+                        <div class="job-title">
+                            <p>Job</p>
+                            <h5>
+                                Front End Development
+                            </h5>
+                        </div>
+                     </div>
+
+                     <div class="filter-2a">
+                        <img src="Cognizant.png" alt="">
+                        <h2>Cognizant</h2>
+                        <h4>5 <img src="star.png" alt=""></h4>
+                        <br>
+                        <p>Location</p>
+                        <br>
+                        <h5>Indore</h5>
+                        <div class="count">
+                            <p>Company Employee Count</p>
+                            <br>
+                            <h5>10000+</h5>
+                        </div>
+                        <div class="industry">
+                            <p>Industry</p>
+                            <br>
+                            <h5>IT Services and Consulting</h5>
+                        </div>
+                        <div class="discreption">
+                            <h4>
+                                At Cognizant, we give organizations the insights to anticipate what customers want and act instantly to deliver on those demands.
+                            </h4>
+                        </div>
+                        <div class="review-section">
+                            <p>Reviews</p>
+                            <h5>5 Star Ratings</h5>
+                        </div>
+                        <div class="job-title">
+                            <p>Job</p>
+                            <h5>
+                                Processing Executive
+                            </h5>
+                        </div>
+                     </div>
+
+                     <div class="filter-2a">
+                        <img src="Oracle.png" alt="">
+                        <h2>Oracle</h2>
+                        <h4>5 <img src="star.png" alt=""></h4>
+                        <br>
+                        <p>Location</p>
+                        <br>
+                        <h5>Indore</h5>
+                        <div class="count">
+                            <p>Company Employee Count</p>
+                            <br>
+                            <h5>10000+</h5>
+                        </div>
+                        <div class="industry">
+                            <p>Industry</p>
+                            <br>
+                            <h5>IT Services and Consulting</h5>
+                        </div>
+                        <div class="discreption">
+                            <h4>
+                                Growing customer expectations. Market-Shaping AI. Self-Optimizing systems. The post-digital age shows no signs of slow down, and the need for the new ideas powered by intelligent technologies has never been greater. A vision for the future can’t be realized without know-how. Accenture partners with our clients drive real
+                            </h4>
+                        </div>
+                        <div class="review-section">
+                            <p>Reviews</p>
+                            <h5>5 Star Ratings</h5>
+                        </div>
+                        <div class="job-title">
+                            <p>Job</p>
+                            <h5>
+                                Senior Application Development
+                            </h5>
+                        </div>
+                     </div>
+
+
+
+              </div>
+
+              </div>
+         
+              </div>
+    </div>
+    <script>
+        function navigate(){
+            var selectedPage = document.getElementById("reviews").value;
+            if(selectedPage !==""){
+                window.location.href = selectedPage;
+            }
+        }
+       function openpage(){
+        var selectedPage1 = document.getElementById("size").value;
+        if (selectedPage1 !==""){
+            window.open(selectedPage1, "_blank");
+        }
+       }
+       function navigate1(){
+            var selectedPage2 = document.getElementById("industry").value;
+            if(selectedPage2 !==""){
+                window.location.href = selectedPage2;
+            }
+        }
+        function navigate3(){
+            var selectedPage4 = document.getElementById("job").value;
+            if(selectedPage4 !==""){
+                window.location.href = selectedPage4;
+            }
+        }
+    </script>
+</body>
+</html>

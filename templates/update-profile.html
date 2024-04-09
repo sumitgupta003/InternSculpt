@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/2.css')}}">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="dash-1">
+            <div class="dash-1-a">
+               <img src="{% if profile %}{{ profile }}{% else %}../static/assets/img/user.png{% endif %}" class="dash-profile" alt="user_profile" style="border-radius: 50%;">
+
+            <!-- {% if profile is none %}
+            <img src="../static/assets/img/user.png" class="dash-profile" alt="user_profile" style="border-radius: 40%;">
+           {% else %}
+           <img src="{{ profile }}" class="dash-profile" alt="user_profile" style="border-radius: 50%;">
+           {% endif %} -->
+          <h2>{{name}}</h2>
+          <h4>(Student)</h4>
+          <a href="" class="btn-20">View Profile</a> 
+          </div>
+          <br>
+          <br>
+          <div class="dash-1-b">
+          <div class="dash-navbar">
+           <img src="home.png" class="nav-image" alt=""><a href="" class="nav-3">Home</a>
+           <br>
+            <img src="phone.png" class="nav-image"  alt=""> <a href="1.html" class="nav-3">Contact</a>
+           <br>
+             <img src="computer.png"  class="nav-image"   alt=""><a href="courses.html" class="nav-3">Courses</a>
+           <br>
+            <img src="rating.png" class="nav-image"   alt=""> <a href="Testimonials and footer.html" class="nav-3">Testimonials</a>
+           <br>
+          </div>
+          </div>
+          </div>
+        <div class="dash-3">
+            <h2>Update Profile</h2>
+            <a href="" ><img src="telephone.png" class="dark"  alt=""></a>
+            <hr>
+            <div class="dash-3-container">
+
+               <form action="/update_profile" method="post" enctype="multipart/form-data">
+                  <label for="" class="label-11">Update mobile number</label>
+                  <input type="number" name="update_mobile" class="update" value="{{number}}" maxlength="50">
+                  <br>
+                  <label for="" class="label-12">Enter your Email</label>
+                  <input type="email" name="update_email" class="update" value="{{email}}" maxlength="50">
+                  <br>
+                  <label for="" class="label-13">Old Password</label>
+                  <input type="password" name="update_old_password" class="update" placeholder="Enter Old Password">
+                  <br>
+                  <label for="" class="label-14">New Password</label>
+                  <input type="password" name="update_new_password" class="update" placeholder="Enter New Password">
+                  <br>
+                  <label for="" class="label-15">Update Profile</label>
+                  <input type="file" name="update_pic" accept="image/*" class="update-1">
+                  <br>
+                  <button type="submit" class="btn-24">Update profile</button>
+              </form>
+              
+
+
+
+
+
+
+
+
+                <!-- <form action="/update_profile", method="post">
+                    <label for="" class="label-11">Update mobile number</label>
+                    <input type="number" name="update_mobile" class="update" placeholder="Ritik Jaiswal" maxlength="50">
+                    <br>
+                    <label for="" class="label-12">Update Email</label>
+                    <input type="email" name="update_email" class="update" placeholder="ritikjaiswal9179@gmail.com" maxlength="50">
+                    <br>
+                    <label for="" class="label-13">Old Password</label>
+                    <input type="password" name="update_old_password" class="update" placeholder="Enter Old Password">
+                    <br>
+                    <label for="" class="label-14">New Password</label>
+                    <input type="password" name="update_new_password" class="update" placeholder="Enter New Password">
+                    <br>
+                    <label for="" class="label-15">Update Profile</label>
+                    <input type="file" name="update_pic" accept="image/*" class="update-1">
+                    <br>
+                    <button type="submit" class="btn-24">Update profile</button>
+
+                </form> -->
+            </div>
+        </div>
+        </div>
+     <script>
+        let toggleBtn = document.getElementById('toggle-btn');
+let body = document.body;
+let darkMode = localStorage.getItem('dark-mode');
+
+const enableDarkMode = () =>{
+   toggleBtn.classList.replace('fa-sun', 'fa-moon');
+   body.classList.add('dark');
+   localStorage.setItem('dark-mode', 'enabled');
+}
+
+const disableDarkMode = () =>{
+   toggleBtn.classList.replace('fa-moon', 'fa-sun');
+   body.classList.remove('dark');
+   localStorage.setItem('dark-mode', 'disabled');
+}
+
+if(darkMode === 'enabled'){
+   enableDarkMode();
+}
+
+toggleBtn.onclick = (e) =>{
+   darkMode = localStorage.getItem('dark-mode');
+   if(darkMode === 'disabled'){
+      enableDarkMode();
+   }else{
+      disableDarkMode();
+   }
+}
+
+     </script>
+    </body>
+</html>

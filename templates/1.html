@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="{{url_for('static', filename = 'css/2.css')}}">
+  <style>
+    .dropdown-content {
+      display: none;
+      /* Hide by default */
+      position: absolute;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 35px;
+      border-radius: 5px;
+      z-index: 1;
+      width: 300px;
+      margin-top: 10px;
+    }
+
+    .dropdown-content a {
+      display: block;
+      color: #333;
+      text-decoration: none;
+      padding: 8px 0;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f4f4f4;
+    }
+
+    /* Adjust the positioning of the dropdown */
+    .dropdown {
+      position: relative;
+      margin-top: 25px;
+      margin-left: 30px;
+    }
+
+    /* Style the user login icon */
+    .user_login img {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+
+<body>
+  <img src="../static/assets/img/rj.jpg" class="img-1" alt="No image">
+  <div class="container">
+    <div class="navbar">
+      <ul>
+        <li><a href="#home" target="_blank">Home</a></li>
+        <li><a href="#services" target="_blank">Services</a></li>
+        <li><a href="{{url_for('login')}}" target="_blank">Student login</a></li>
+        <li><a href="{{url_for('courses')}}" target="_blank">Courses</a></li>
+        <li><a href="{{url_for('job_listing')}}" target="_blank">Opportunities</a></li>
+
+
+
+
+
+
+        {% if login: %}
+        <div class="dropdown">
+          <a class="user_login" href="" style="margin-top: 5px; margin-left: 20px;"><img
+              src="{{u_profile}}" alt="" height="30px" width="30px"> </a>
+          <div class="dropdown-content">
+            <a href="#" style="color: #333;">Hello! {{u_name}}</a>
+            <a href="#" style="color: #333;">{{u_email}}</a>
+            <form id="dashboard" action="{{ url_for('dashboard') }}" method="post" enctype="multipart/form-data">
+              <input type="hidden" name="d_name" id="dash_name">
+              <input type="hidden" name="d_email" id="dash_email">
+              <input type="hidden" name="d_number" id="dash_number">
+              <input type="hidden" name="d_profile" id="dash_profile">
+              <a href="#" onclick="dash_details('{{ u_name }}', '{{ u_email }}', '{{ u_number }}', '{{u_profile}}'); 
+              document.getElementById('dashboard').submit(); return false;" style="color: #333;">My profile</a>
+          </form>
+          <a href="{{url_for('home')}}" style="color: #333;">Log Out</a>
+          
+          </div>
+        </div>
+        {%endif%}
+
+
+
+
+
+
+
+
+
+      </ul>
+    </div>
+
+    <div class="right">
+      <a href="{{url_for('one_star')}}"><button class="btn-1" onclick="findLocation(latitude,longitude)">Find Internship</button></a>
+
+    </div>
+
+    <div class="left">
+      <img src="../static/assets/img/Untitled (3).png" alt="">
+    </div>
+    <div class="center">
+      <h1>Learn And Explore With Industry Expert</h1>
+      <p>Your Intership is a stepping stone to your career, so give it your all</p>
+    </div>
+  </div>
+
+  <div class="services" id="services">
+    <img src="../static/assets/img/our-services-background.jpg" alt="">
+    <h1> Top Certificates Provider </h1>
+    <p>
+      Explore the services offered by us and increase your potential
+    </p>
+    <div class="box">
+      <div class="box-1">
+        <img src="../static/assets/img/IN.png" alt="">
+        <h4>Intern Sculpt</h1>
+          <p>One of the most emerging intership providing platform for students and working profession</p>
+          <button class="btn-2">See more</button>
+      </div>
+      <div class="box-2">
+        <img src="../static/assets/img/universal.jpg" alt="">
+        <h4>Universal Informatics</h1>
+          <p>One of the most emerging intership providing platform for students and working profession</p>
+          <button class="btn-2">See more</button>
+      </div>
+      <div class="box-3">
+        <img src="../static/assets/img/insight.png" alt="">
+        <h4>Insight Gro</h1>
+          <p>One of the most emerging intership providing platform for students and working profession</p>
+          <button class="btn-2">See more</button>
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <a class="chatbot-button" href="{{url_for('chatbot')}}">Chat</a>
+
+  </div>
+
+  {% include "Testimonials and footer.html" %}
+
+  <form id="location" action="/" method="post">
+    <input type="hidden" name="latitude" id="lat">
+    <input type="hidden" name="longitude" id="long">
+  </form>
+
+  <!-- <form id="dashboard" action="/dashboard" method="post">
+    <input type="hidden" name="d_name" id="dash_name">
+    <input type="hidden" name="d_email" id="dash_email">
+    <input type="hidden" name="d_number" id="dash_number">
+  </form> -->
+
+  <script>
+
+    let latitude, longitude
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        alert("Cannot find location");
+      }
+    }
+
+    function showPosition(position) {
+      latitude = position.coords.latitude;
+      longitude = position.coords.longitude;
+    }
+
+    function findLocation(latitudeL, longitudeL) {
+      document.getElementById('lat').value = latitudeL;
+      document.getElementById('long').value = longitudeL;
+      document.getElementById('location').submit();
+
+    }
+
+    function dash_details(u_name, u_email, u_number, u_profile){
+      document.getElementById('dash_name').value = u_name;
+      document.getElementById('dash_email').value = u_email;
+      document.getElementById('dash_number').value = u_number;
+      document.getElementById('dash_profile').value = u_profile
+    }
+
+    getLocation();
+
+
+
+
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".user_login").click(function (e) {
+        e.preventDefault(); // Prevent default link behavior
+        $(".dropdown-content").toggle();
+      });
+    });
+  </script>
+
+
+</body>
+
+</html>

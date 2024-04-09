@@ -1,0 +1,301 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+
+}
+.login{
+    background-color: #7d2ae8;
+    width: 100vw;
+    height: 100vh;
+}
+.holder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 70%;
+    background-color:white;
+    position: absolute;
+    top: 15%;
+    left: 18%;
+    border: 1px solid black;
+    
+   
+}
+.holder-2{
+    position: absolute;
+    left: 34.8%;
+    top:0.0%;
+}
+.holder-2 .front{
+   height: 505px;
+   width: 700px;
+   
+}
+.holder-2::before,
+.holder-2::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #7d2ae8;
+    opacity: 0.5;
+    z-index: 12;
+
+}
+.text{
+    position: absolute;
+    top: 35%;
+    left: 30%;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    z-index: 13;
+    font-size: 35px;
+}
+.span
+{
+    margin-left: 40px;
+
+}
+.text1{
+    font-size: 17px;
+    font-weight: 900;
+    margin-left: 68px;
+    margin-top: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.holder-1{
+    position: absolute;
+    left: 5%;
+}
+.regist{
+    margin-bottom: 400px;
+    margin-left: 50px;
+
+}
+.input{
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid black;
+    width: 200px;
+    height: 30px;
+    
+}
+
+.block-1{
+    position: absolute;
+    top: 20%;
+}
+
+.imgs-1{
+  width: 15px;
+  height: 15px;    
+   margin-top: 2px;
+   margin-left:1px;
+}
+::placeholder{
+    text-align: center;
+    
+    font-size: 15px;
+    font-weight:600;
+
+}
+.block-2{
+    position: absolute;
+    top: 30%;
+}
+.imgs-2{
+        width: 15px;
+        height: 15px;    
+         margin-top: 2px;
+         margin-left:1px;
+}
+.block-3{
+    position: absolute;
+    top: 40%;
+}
+.imgs-3{
+        width: 15px;
+        height: 15px;    
+         margin-top: 2px;
+         margin-left: -0.5px;
+}
+.block-4{
+    position: absolute;
+    top: 50%;
+}
+.imgs-4{
+        width: 15px;
+        height: 15px;    
+         margin-top: 2px;
+         margin-left: -0.5px;
+}
+.block-5{
+    position: absolute;
+    top: 60%;
+}
+.imgs-5{
+        width: 17px;
+        height: 17px;    
+         margin-top: 2px;
+         margin-left: -1px;
+}
+.submiit{
+    padding: 0;
+    cursor: pointer;
+
+}
+.submite{
+    color: #fff;
+    background: #7d2ae8;
+    border-radius: 6px;
+    padding: 0;
+    cursor: pointer;
+    width: 300px;
+    height: 40px;
+
+    position: absolute;
+    top: 75%;
+    right: -58px;
+    
+}
+.submite:hover{
+    background: #5b13b9;
+    cursor: pointer;
+
+}
+.forgett{
+    color: black;
+    font-size: 15px;
+    position: absolute;
+    top: 90%;
+    left: 10px;
+    
+}
+/* Forget Pass Css
+*/
+
+.block-6{
+    position: absolute;
+    top: 20%;
+}
+
+.imgs-4{
+  width: 15px;
+  height: 15px;    
+   margin-top: 2px;
+   margin-left:1px;
+}
+.submiite{
+    padding: 0;
+    cursor: pointer;
+
+}
+.submitte{
+    color: #fff;
+    background: #7d2ae8;
+    border-radius: 6px;
+    padding: 0;
+    cursor: pointer;
+    width: 300px;
+    height: 40px;
+
+    position: absolute;
+    top: 75%;
+    right: -35px;
+    
+}
+.submitte:hover{
+    background: #5b13b9;
+    cursor: pointer;
+
+}
+.forgets{
+    color: black;
+    font-size: 15px;
+    position: absolute;
+    top: 90%;
+    left: 18px;
+    
+}
+.regists{
+    margin-bottom: 400px;
+    margin-left: 15px;
+
+}
+.imgs-6{
+    width: 15px;
+    height: 15px;    
+     margin-top: 2px;
+     margin-left:1px;
+  }
+  .g-recaptcha{
+    left: -15px;
+    top: 45%;
+    position: absolute;
+  }
+
+  .terms{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder
+  }
+
+  /* PLaylist Css */
+  .playlist{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+
+}
+.playlist h1{
+    text-align: center;
+}
+
+
+.playlist-1{
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: row;
+   
+    
+
+}
+.html-a{
+     
+    width: 25%;
+    height: 60%;
+    text-align: center;
+    background-color: white;
+    margin-top:10px ;
+    border: 1px solid black;
+    margin: 55px;
+    padding: 8px;
+
+
+
+}
+
+.playlist-2{
+    width: 100%;
+    height: 90%;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: row;
+}
+.html-b{
+    width: 25%;
+    height: 60%;
+    text-align: center;
+    background-color: white;
+    margin-top:10px ;
+    border: 1px solid black;
+    margin: 55px;
+    padding: 8px;
+    
+}

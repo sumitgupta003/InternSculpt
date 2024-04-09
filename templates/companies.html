@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/2.css')}}">
+
+</head>
+
+<body>
+
+    <div class="filters">
+        <div class="filter-1">
+            <h2>Filter Companies</h2>
+            <h4>Showing <b>11-20</b> of <b>788 </b> Companies sorted by relevancy</h4>
+            <hr>
+            <form action="/companies", method="post">
+                <!-- <label for="" class="label-6">Location</label>
+                <br>
+                <select name="loc" id="industry">
+                    <option value="my_location">Use my nearby location</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Indore">Indore</option>
+                    <option value="Jaipur">Jaipur</option>
+                    <option value="Ujjain">Ujjain</option>
+                    <option value="Chennai">Chennai</option>
+                </select> -->
+                <!-- <input type="text" class="location" placeholder="Indore"> -->
+                <hr>
+                <label for="" class="label-7">Industries</label>
+                <br>
+                <select name="industry" id="industry">
+
+                    <option value="Information Technology">Information Technology</option>
+                    <option value="Information Technology Support">Information Technology Support</option>
+                    <option value="Software Development">Software Development</option>
+                    <option value="Management & Administration">Management & Administration</option>
+                    <option value="Management Consulting">Management Consulting</option>
+                    <!-- <option value="Customer Supports">Customer Supports</option> -->
+                    <!-- <option value="Network Solutions">Network Solutions</option> -->
+                    <option value="Business Consulting">Business Consulting</option>
+                    <option value="IT Services and Consulting">IT Services and Consulting</option>
+
+                </select>
+
+                <hr>
+
+                <label for="" class="label-8">Job title</label>
+                <br>
+                <select name="job" id="job">
+
+                    <option value="Web Development">Web Development</option>
+                    <option value="Software Development">Software Development</option>
+                    <option value="Android Development">Android Development</option>
+                    <option value="Digital Marketing">Digital Marketing</option>
+                    <option value="Web Designing">Web Designing</option>
+                    <option value="Tele Calling Service">Tele Calling Service</option>
+                    <option value="Information Technology">Information Technology</option>
+                </select>
+                <hr>
+
+                <label for="" class="label-8">Select zone</label>
+                <br>
+                <select name="zone" id="job">
+                    <option value="all">All zones</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                <br>
+                <a href="{{url_for('map')}}" style="margin-left: 220px;">see map zones</a>
+                <hr>
+                <label for="" class="label-9">Reviews</label>
+                <br>
+                <select name="reviews" id="reviews">
+                    <option value="1 star Ratings"> 1 Star Ratings </option>
+                    <option value="2 star Ratings">2 Star Ratings </option>
+                    <option value="3 star Ratings"> 3 Star Ratings </option>
+                    <option value="4 star Ratings"> 4 Star Ratings </option>
+                    <option value="5 star Ratings"> 5 Star Ratings </option>
+                </select>
+
+                <hr>
+                <!-- <label for="" class="label-10">Company Employes Count</label>
+                <br>
+                <select name="emp_count" id="size" onchange="openpage()">
+
+                    <option value="5star.html"> 1000-10000</option>
+                    <option value="4star.html"> 500-1000</option>
+                    <option value="3star.html"> 100-500</option>
+                    <option value="2star.html"> 10-100</option>
+                    <option value="1star.html"> 0-10 </option>
+
+
+
+                </select> -->
+                <hr>
+                <button class="btn-15">Apply Filters</button>
+            </form>
+
+        </div>
+        <div class="filter-2">
+            {% if filter%}
+            {%for company in filter_companies%}
+            <div class="filter-2a">
+                <a href="{{company.c_link}}" style="text-decoration: none; color: black;">
+                 <img src="../static/assets/img/{{company.c_image}}" alt="">
+                 <h2>{{company.c_name}}</h2>
+                 <h4>{{company.c_rating}} <img src="../static/assets/img/star.png" alt=""></h4>
+                 <br>
+                 <div class="discreption">
+                     <h4>
+                         {{company.c_def}}
+                     </h4>
+                 </div>
+                 <div>
+                     {% if company.c_address != None %}
+                         <p>Address: {{ company.c_address }}</p>
+                     {% endif %}
+                 </div>
+                 
+                 
+                 <div>
+                 <p>Location</p>
+                 <br>
+                 <h5>{{company.c_location}}</h5>
+                 <div class="count">
+                     <p>Company Employee Count</p>
+                     <br>
+                     <h5>{{company.c_emp_count}}++</h5>
+                 </div>
+                 <div class="industry">
+                     <p>Industry</p>
+                     <br>
+                     <h5>{{company.c_industry}}</h5>
+                 </div>
+             </div>
+                
+                 <div class="review-section">
+                     <p>Reviews</p>
+                     <h5>{{company.c_reviews}}</h5>
+                 </div>
+                 <div class="job-title">
+                     <p>Job</p>
+                     <h5>
+                         {{company.c_job}}
+                     </h5>
+                 </div>
+             </a>
+             </div>
+            {%endfor%}
+            {%else%}
+            {%for company in all_the_companies%}
+            <div class="filter-2a">
+               <a href="{{company.c_link}}" style="text-decoration: none; color: black;">
+                <img src="../static/assets/img/{{company.c_image}}" alt="">
+                <h2>{{company.c_name}}</h2>
+                <h4>{{company.c_rating}} <img src="../static/assets/img/star.png" alt=""></h4>
+                <br>
+                <div class="discreption">
+                    <h4>
+                        {{company.c_def}}
+                    </h4>
+                </div>
+                <div>
+                    {% if company.c_address != None %}
+                        <p>Address: {{ company.c_address }}</p>
+                    {% endif %}
+                </div>
+                
+                
+                <div>
+                <p>Location</p>
+                <br>
+                <h5>{{company.c_location}}</h5>
+                <div class="count">
+                    <p>Company Employee Count</p>
+                    <br>
+                    <h5>{{company.c_emp_count}}++</h5>
+                </div>
+                <div class="industry">
+                    <p>Industry</p>
+                    <br>
+                    <h5>{{company.c_industry}}</h5>
+                </div>
+            </div>
+               
+                <div class="review-section">
+                    <p>Reviews</p>
+                    <h5>{{company.c_reviews}}</h5>
+                </div>
+                <div class="job-title">
+                    <p>Job</p>
+                    <h5>
+                        {{company.c_job}}
+                    </h5>
+                </div>
+            </a>
+            </div>
+            {%endfor%}
+            {%endif%}
+        </div>
+
+    </div>
+
+    </div>
+    </div>
+    <script>
+        function navigate() {
+            var selectedPage = document.getElementById("reviews").value;
+            console.log(selectedPage)
+            if (selectedPage !== "") {
+                window.location.href = selectedPage;
+            }
+            document.getElementById('inputhidden').value = selectedPage;
+            document.getElementById("formstar").submit();
+
+            //     function BuyItem(buyItem) {
+            //     document.getElementById('productInput').value = buyItem;
+            //     document.getElementById('productForm').submit();
+            // }
+        }
+        function openpage() {
+            var selectedPage1 = document.getElementById("size").value;
+            if (selectedPage1 !== "") {
+                window.open(selectedPage1, "_blank");
+            }
+        }
+        function navigate1() {
+            var selectedPage2 = document.getElementById("industry").value;
+            if (selectedPage2 !== "") {
+                window.location.href = selectedPage2;
+            }
+        }
+        function navigate3() {
+            var selectedPage4 = document.getElementById("job").value;
+            if (selectedPage4 !== "") {
+                window.location.href = selectedPage4;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/registration1.css')}}">
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
+
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <style>
+        @media (max-width: 1000px) {
+            .holder-2 {
+                display: none;
+            }
+
+            .holder-1 {
+                margin-left: 40px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="forget-pass">
+        <div class="login">
+            <div class="holder">
+                <div class="holder-1">
+
+                    {%if otp_generated%}
+                    <form action="/forget_password", method="post">
+                        <h1 class="regists">Forget Password</h1>
+                        
+                        <div class="block-6">
+                            <img src="../static/assets/img/email.png" class="imgs-4" alt=""> 
+                            <input type="email" class="input"  value={{email_otp_sent}} readonly>
+                            <br>
+                        </div>
+
+                        <div class="block-2">
+                            <img src="../static/assets/img/otp.png" class="imgs-6" alt=""> 
+                            <input type="number" placeholder="Enter OTP" class="input" name="otp_by_user">
+                            <br>
+                        </div>
+                        
+                        <div class="g-recaptcha" data-sitekey="6LfgD2wpAAAAAODeaDBBjYJUvjp7zIzxNQLHhJqP"></div>
+                        <h4 style="color: #057e05; margin: 20px 0px; position: absolute; top: 60%; background-color: #e9ffe7; padding: 10px;">OTP sent Successfully!</br> If not found please check spam folder</h4>
+                        <div class="submiite">
+                            <input type="submit" class="submitte">
+                        </div>
+                        
+                    </form>
+                    <div class="forgets">
+                        Already have an account? <a href="">Login</a>
+                    </div>
+                    
+
+                    {%else%}
+                    <form action="/forget_password" method="post">
+                        <h1 class="regists">Forget Password</h1>
+                        <div class="block-6">
+                            <img src="../static/assets/img/email.png" class="imgs-4" alt=""> 
+                            <input type="email" placeholder="Enter Your Email" class="input" name="email_for_otp">
+                            <br>
+                            {%if error%}
+                            <h4 style="color: red; margin-top: 20px;">You have enterend the wrong otp! please retry</h4>
+                            {%endif%}
+                        </div>
+                        <div class="g-recaptcha" data-sitekey="6LfgD2wpAAAAAODeaDBBjYJUvjp7zIzxNQLHhJqP"></div>
+                        <div class="submiite">
+                            <button type="submit" class="submitte">Get otp</button>
+                        </div>
+
+                    </form>
+                    <div class="forgets">
+                        Already have an account? <a href="">Login</a>
+                    </div>
+                    {%endif%}
+                </div>
+                <div class="holder-2">
+
+                    <img src="../static/assets/img/frontImg.jpg" alt="" class="front">
+                    <div class="text">
+                        Every new friend is a
+                        <br>
+                        <span class="span"> new adventure </span>
+                        <div class="text1">Let's get connected</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

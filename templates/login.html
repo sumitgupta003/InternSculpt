@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="{{url_for('static', filename = 'css/2.css')}}">
+</head>
+<body>
+
+  {% if registered: %}
+  alert("Registered Successfully")
+  {% endif %}
+    <div class="student-login" id="student-login">
+      <form action="/login" method="post">
+         <div class="container-3">
+               <h1 class="stu-h1">Student Login </h1>
+               <br><br>
+            <label for="N" id="labels" class="label" name="name">Student Name</label> 
+            <br>
+             <input type="text" placeholder="Enter Your Name" required class="input">
+
+             <br>
+
+             <br>
+             <label for="P" id="labels" class="label-2">Email</label>
+              <br>
+              <input type="email" placeholder="Enter Email" name="email" class="input">
+              <br>
+              <br>
+              <label for="E" id="labels" class="label-1">Password</label>
+              
+              <br>
+              <input type="password" placeholder="Enter Password" name="password" class="input">
+             
+              <br>
+              <br>
+               <button class="btn-3">Login</button>
+            </div>
+            <div class="links">
+              <div class="orlogin"> Or login With
+              </div>
+              </div>
+              
+              <div class="facebook">
+               
+                <b id="facebook"> <img src="../static/assets/img/facebook.png" class="fb" alt=""><span>Facebook</span></b>
+              </div>
+              <div class="Gmail">
+                <b id="Gmail"> <img src="../static/assets/img/gmail.png"  class="gm"><span>Gmail</span></b>
+              </div>
+            
+              <!-- <div class="forget">
+               <a href="" class="forget-pass">Forget Password?</a>
+               <button class="btn-4" href="{{url_for('registration')}}">Sign Up</button>
+             </div> -->
+        
+
+      </form>
+      <div class="forget">
+        <a href="{{url_for('forget_password')}}" class="forget-pass">Forget Password?</a>
+        <a class="btn-4" href="{{url_for('registration')}}">Sign Up</a>
+      </div>
+     </div>
+
+   
+</body>
+</html>
