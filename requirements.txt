@@ -7,7 +7,7 @@ dl==0.1.0
 docutils==0.20.1
 filelock==3.13.3
 Flask==2.3.2
-Flask_SQLAlchemy==2.5.0
+Flask_SQLAlchemy==3.0.3
 geopy==2.4.1
 HTMLParser==0.0.2
 ipython==8.12.3
