@@ -234,23 +234,28 @@ def navigate():
         return render_template(f'{star}.html')
     return render_template("1.html")
 
-@app.route("/add_company")
+@app.route("/add_company", methods = ['GET', 'POST'])
 def add():
-    name = "Magic Clickz"
-    image = "Feedbox.png"
-    defi = "Choose Magic Clickz as your digital marketing agency and propel your business to new heights with our award-winning digital marketing services and proprietary technology platform. Magic Clickz is a tech-enabled digital marketing solutions provider, and we create custom strategies for each of our clients based on their needs and goals."
-    rating = 4.8
-    location = "Indore"
-    count = 6000
-    industry = "Marketing & Advertising "
-    review = "4.8 Star Ratings"
-    job_type ="Graphic Designer"
-    link = "https://feedbox.co.in/"
-
-    company = Companies(c_name=name, c_image = image, c_def=defi, c_rating = rating, c_location = location, c_emp_count = count, c_industry = industry, c_reviews= review, c_job = job_type, c_link = link)
-    db.session.add(company)
-    db.session.commit()
-    return 'data added successfully'
+    if request.method == "POST":
+        name = request.form['name']
+        image = request.form['image']
+        defi = request.form['defi']
+        rating = request.form['rating']
+        location = request.form['location']
+        count = request.form['count']
+        industry = request.form['industry']
+        review = request.form['review']
+        job_type = request.form['job_type']
+        link = request.form['link']
+        address = request.form['address']
+        zone = request.form['zone']
+    
+        company = Companies(c_name=name, c_image = image, c_def=defi, c_rating = rating, c_location = location, c_emp_count = count, c_industry = industry, c_reviews= review, c_job = job_type, c_link = link, c_address = address, c_zones = zone)
+        db.session.add(company)
+        db.session.commit()
+        return 'data added successfully'
+    else:
+        return render_template("add_company.html")
 
 
 @app.route("/map")
