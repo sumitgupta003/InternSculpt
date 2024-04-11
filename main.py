@@ -218,10 +218,16 @@ def one_star():
         if zone != "all":
             filtered_companies = Companies.query.filter_by(c_industry = industry,c_zones = zone).all()
             print("if executed")
-        else:
-            Weblinksfiltered_companies = Companies.query.filter_by(c_industry = industry, c_zones = zone).all()
-            print("else exucrg")
-        return render_template("companies.html", filter_companies = filtered_companies, filter=True)
+            if filtered_companies:
+                return render_template("companies.html", filter_companies = filtered_companies, filter=True)
+            else:
+                return render_template("companies.html", filter_not_available = True)
+        elif zone == "all":
+            filtered_companies = Companies.query.filter_by(c_industry = industry).all()
+            if filtered_companies:
+                return render_template("companies.html", filter_companies = filtered_companies, filter=True)
+            else:
+                return render_template("companies.html", filter_not_available = True)
     all_companies = db.session.query(Companies).all()
     return render_template("companies.html", all_the_companies = all_companies)
 

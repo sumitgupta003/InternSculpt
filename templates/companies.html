@@ -6,7 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{{url_for('static', filename = 'css/2.css')}}">
+    <style>
+        .filter-not-available {
+            text-align: center;
+            margin-top: 20px;
+        }
 
+        .filter-not-available p {
+            font-size: 25px;
+            color: #333;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,7 +26,7 @@
             <h2>Filter Companies</h2>
             <h4>Showing <b>11-20</b> of <b>788 </b> Companies sorted by relevancy</h4>
             <hr>
-            <form action="/companies", method="post">
+            <form action="/companies" , method="post">
                 <!-- <label for="" class="label-6">Location</label>
                 <br>
                 <select name="loc" id="industry">
@@ -106,99 +116,108 @@
             {% if filter%}
             {%for company in filter_companies%}
             <div class="filter-2a">
-                <a href="{{company.c_link}}" style="text-decoration: none; color: black;">
-                 <img src="../static/assets/img/{{company.c_image}}" alt="">
-                 <h2>{{company.c_name}}</h2>
-                 <h4>{{company.c_rating}} <img src="../static/assets/img/star.png" alt=""></h4>
-                 <br>
-                 <div class="discreption">
-                     <h4>
-                         {{company.c_def}}
-                     </h4>
-                 </div>
-                 <div>
-                     {% if company.c_address != None %}
-                         <p>Address: {{ company.c_address }}</p>
-                     {% endif %}
-                 </div>
-                 
-                 
-                 <div>
-                 <p>Location</p>
-                 <br>
-                 <h5>{{company.c_location}}</h5>
-                 <div class="count">
-                     <p>Company Employee Count</p>
-                     <br>
-                     <h5>{{company.c_emp_count}}++</h5>
-                 </div>
-                 <div class="industry">
-                     <p>Industry</p>
-                     <br>
-                     <h5>{{company.c_industry}}</h5>
-                 </div>
-             </div>
-                
-                 <div class="review-section">
-                     <p>Reviews</p>
-                     <h5>{{company.c_reviews}}</h5>
-                 </div>
-                 <div class="job-title">
-                     <p>Job</p>
-                     <h5>
-                         {{company.c_job}}
-                     </h5>
-                 </div>
-             </a>
-             </div>
+                <a href="{{ url_for('job_description' ~ company.id) }}" style="text-decoration: none; color: black;">
+                    {%endif%}
+                    <img src="../static/assets/img/{{company.c_image}}" alt="">
+                    <h2>{{company.c_name}}</h2>
+                    <h4>{{company.c_rating}} <img src="../static/assets/img/star.png" alt=""></h4>
+                    <br>
+                    <div class="discreption">
+                        <h4>
+                            {{company.c_def}}
+                        </h4>
+                    </div>
+                    <div>
+                        {% if company.c_address != None %}
+                        <p>Address: {{ company.c_address }}</p>
+                        {% endif %}
+                    </div>
+
+
+                    <div>
+                        <p>Location</p>
+                        <br>
+                        <h5>{{company.c_location}}</h5>
+                        <div class="count">
+                            <p>Company Employee Count</p>
+                            <br>
+                            <h5>{{company.c_emp_count}}++</h5>
+                        </div>
+                        <div class="industry">
+                            <p>Industry</p>
+                            <br>
+                            <h5>{{company.c_industry}}</h5>
+                        </div>
+                    </div>
+
+                    <div class="review-section">
+                        <p>Reviews</p>
+                        <h5>{{company.c_reviews}}</h5>
+                    </div>
+                    <div class="job-title">
+                        <p>Job</p>
+                        <h5>
+                            {{company.c_job}}
+                        </h5>
+                    </div>
+                </a>
+            </div>
             {%endfor%}
+            {%elif filter_not_available%}
+            <div class="filter-not-available">
+                <img src="../static/assets/img/magnifying_x.jpg" alt="">
+                <p>No filters available at the moment.</p>
+            </div>
+
             {%else%}
             {%for company in all_the_companies%}
             <div class="filter-2a">
-               <a href="{{company.c_link}}" style="text-decoration: none; color: black;">
-                <img src="../static/assets/img/{{company.c_image}}" alt="">
-                <h2>{{company.c_name}}</h2>
-                <h4>{{company.c_rating}} <img src="../static/assets/img/star.png" alt=""></h4>
-                <br>
-                <div class="discreption">
-                    <h4>
-                        {{company.c_def}}
-                    </h4>
-                </div>
-                <div>
-                    {% if company.c_address != None %}
+                <a href="{{ url_for('job_description' ~ company.id) }}" style="text-decoration: none; color: black;">
+                    {%endif%}
+                    <!-- <a href="{{url_for('job_description1')}}" style="text-decoration: none; color: black;"> -->
+                    <img src="../static/assets/img/{{company.c_image}}" alt="">
+                    <h2>{{company.c_name}}</h2>
+                    <h4>{{company.c_rating}} <img src="../static/assets/img/star.png" alt=""></h4>
+                    <br>
+                    <div class="discreption">
+                        <h4>
+                            {{company.c_def}}
+                        </h4>
+                    </div>
+                    <div>
+                        {% if company.c_address != None %}
                         <p>Address: {{ company.c_address }}</p>
-                    {% endif %}
-                </div>
-                
-                
-                <div>
-                <p>Location</p>
-                <br>
-                <h5>{{company.c_location}}</h5>
-                <div class="count">
-                    <p>Company Employee Count</p>
-                    <br>
-                    <h5>{{company.c_emp_count}}++</h5>
-                </div>
-                <div class="industry">
-                    <p>Industry</p>
-                    <br>
-                    <h5>{{company.c_industry}}</h5>
-                </div>
-            </div>
-               
-                <div class="review-section">
-                    <p>Reviews</p>
-                    <h5>{{company.c_reviews}}</h5>
-                </div>
-                <div class="job-title">
-                    <p>Job</p>
-                    <h5>
-                        {{company.c_job}}
-                    </h5>
-                </div>
-            </a>
+                        {% endif %}
+                    </div>
+
+
+                    <div>
+                        <p>Location</p>
+                        <br>
+                        <h5>{{company.c_location}}</h5>
+                        <div class="count">
+                            <p>Company Employee Count</p>
+                            <br>
+                            <h5>{{company.c_emp_count}}++</h5>
+                        </div>
+                        <div class="industry">
+                            <p>Industry</p>
+                            <br>
+                            <h5>{{company.c_industry}}</h5>
+                        </div>
+                    </div>
+
+                    <div class="review-section">
+                        <p>Reviews</p>
+                        <h5>{{company.c_reviews}}</h5>
+                    </div>
+                    <div class="job-title">
+                        <p>Job</p>
+                        <h5>
+                            {{company.c_job}}
+                        </h5>
+                    </div>
+                </a>
             </div>
             {%endfor%}
             {%endif%}
