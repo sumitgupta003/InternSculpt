@@ -386,6 +386,20 @@ def job_description15():
 
 
 
+
+
+
+#video-call
+
+@app.route("/video_call")
+def video_call():
+    return render_template("index.html")
+
+
+
+
+
+
 @app.route("/playlist")
 def playlist():
     return render_template("playlist.html")
