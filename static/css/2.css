@@ -881,7 +881,7 @@ font-family: 'Poppins',sans-serif;
   
 }
 .filter-2a{
-  height: 34%;
+  height: 38%;
   width: 1050px;
   border: 1px solid black;
   margin-left: 35px;
@@ -1458,3 +1458,160 @@ font-family: 'Poppins',sans-serif;
   margin-left: 40px;
   margin-top: 40px;
 }
+
+
+
+/* quiz and playlist */
+
+.img-30{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  margin-left: 550px;
+  margin-top: -5px;
+}
+.img-31{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  margin-left: 970px;
+  top: 35px;
+}
+.ebody{
+  background-color: #eee;
+}
+.ebody h1{
+  margin-top: 40px;
+  margin-left: 620px;
+}
+.lecture-container{
+  margin-top:40px;
+  margin-left: 225px;
+ 
+
+}
+.cint{
+  background-color: white;
+}
+.table-1{
+  padding: 40px;
+  margin: 20px;
+  height: 200px;
+}
+.tr-1{
+  padding:20px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+th{
+  padding: 10px;
+  
+}
+.img-36{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+   left: 330px;
+  top: 810px;
+}
+.img-37{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  margin-left: 1160px;
+  top: 810px;
+  
+}
+.quiz h1{
+  margin-top: 18px;
+  margin-left: 400px;
+  padding: 10px;
+}
+.img-38{
+  width: 40px;
+  height: 40px;
+
+}
+.quiz-link{
+  text-align: center;
+  background-color: white;
+  padding:20px;
+
+}
+.quiz-link h3{
+  padding: 10px;
+  margin: 10px;
+}
+.quiz-link a{
+  text-decoration: none;
+  font-size: 30px;
+  letter-spacing: 1px;
+  color: rgb(255, 0, 0);
+  font-weight: 900;
+}
+.quiz-link a:hover{
+  color: blue;
+  
+}
+.th-1 a{
+  text-decoration: none;
+  color: black;
+
+}
+.th-1 a:hover{
+  color: blue;
+}
+.img-40{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 750px;
+  top: 1140px;
+
+
+}
+.get-certificate{
+  background-color: white;
+  padding:60px;
+  text-align: center;
+}
+.btn-35{
+  margin-top: 10px;
+  left: 625px;
+  position: absolute;
+  background-color: #8e44ad;
+  color: rgb(244, 241, 241);
+  width: 300px;
+  height: 43px;
+  border: 2px solid ;
+  text-decoration: none;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+.btn-35:hover{
+  background-color: #2c3e50
+}
+.certificate h1{
+  margin-top: 30px;
+  margin-left: 500px;
+  padding: 10px;
+}
+.img-41{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  left: 430px;
+  top: 1085px;
+  
+ 
+}
+.img-42{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  margin-left: 1080px;
+  top: 1085px;
+}
+/* Certificate Css*/

@@ -398,18 +398,24 @@ def video_call():
     return render_template("index.html")
 
 
-
+@app.route("/certificate_generator")
+def generator():
+    return render_template("indexofcert.html")
 
 
 
 @app.route("/playlist")
 def playlist():
-    return render_template("playlist.html")
+    return render_template("lecture.html")
 
 
 @app.route("/css_tutorial")
 def css_playlist():
-    return render_template("playlist-1.html")
+    return render_template("lecture-1.html")
+
+@app.route("/react_playlist")
+def react_playlist():
+    return render_template("playlist-3.html")
 
 
 if __name__ == '__main__':

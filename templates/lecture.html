@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/2.css')}}">
+</head>
+<style>
+    table,th ,td {
+        border: 1px solid black;
+    }
+</style>
+<body class="ebody"> 
+
+       <img src="../static/assets/img/html-5.png" class="img-30" alt="">
+        <h1>    HTML Lecture Playlist  </h1>
+        <img src="../static/assets/img/html-5.png" class="img-31" alt="">
+        
+        <div class="cint">
+        <div class="lecture-container">
+        
+            <div class="lectures-part">
+                 <table style="width: 80%;" class="table-1">
+                   <tr class="tr-1">
+                    <th>S.No</th>
+                    <th class="th-1">Lecture List</th>
+                   </tr>
+                   <tr class="tr-1">
+                    <th>1.</th>
+                    <th class="th-1"><a href="https://drive.google.com/file/d/1MF4hnh2bqXCYJMvzC-O2us92X4lY4V1r/view?usp=drive_link">Html Introduction</a></th>
+                   </tr>
+                   <tr>
+                    <th>2.</th>
+                    <th class="th-1"><a href="https://drive.google.com/file/d/1QXv94_TCJ7fkEhOGujGH-ORpMzyBBKEJ/view?usp=sharing">Html And Css Tutorial -1</a></th>
+                   </tr>
+                   <tr class="tr-1">
+                    <th>3.</th>
+                    <th class="th-1"><a href="https://drive.google.com/file/d/10uaMfLqVLG01KZM7nnWf8wtrRjwNmCuy/view?usp=sharing">Add links to your website HTML </a></th>
+                   </tr>
+                   <tr>
+                    <th>4.</th>
+                    <th class="th-1"><a href="https://drive.google.com/file/d/1qo4EJ_vCTFlJmAJB5FBaix2pxKcbf_oQ/view?usp=drive_link ">Useful Extension HTML</a></th>
+                   </tr>
+                   <tr>
+                    <th>5.</th>
+                    <th class="th-1"><a href="https://drive.google.com/file/d/1kUFhl5KC1dzpndpROKjFqKv77Nzi4zfW/view?usp=sharing">Some HTML tags for text formatting</a></th>
+                   </tr>
+                   <tr>
+                    <th>6.</th>
+                    <th class="th-1"><a href="https://drive.google.com/file/d/1eBFWOun3BnzyoDdPD7x3zfF_pBxcW4jO/view?usp=sharing">ID and Classes</a></th>
+                   </tr>
+                   <tr>
+                    <th>7.</th>
+                    <th class="th-1"><a href="https://drive.google.com/file/d/1KNXkMDVz0KPBa_9d5YPYn5hna_fRjQmX/view?usp=sharing">HTML Images</a></th>
+                   </tr>
+                   <tr>
+                    <th>8.</th>
+                    <th class="th-1"><a href="https://drive.google.com/file/d/1K_AAVuuCIzTnhXWbRzZWUiED4hmgTS9M/view?usp=sharing">HTML Heading, paragraph , line breaks</a></th>
+                   </tr>
+                   <tr>
+                    <th>9.</th>
+                    <th class="th-1"> <a href="https://drive.google.com/file/d/1eLeHXbnXfRhndvmwmF7yLOqBSCBmDI17/view?usp=sharing">HTML Form Part2_ Action, Method, Name </a></th>
+                   </tr>
+                   <tr>
+                    <th>10.</th>
+                    <th class="th-1"><a href="https://drive.google.com/file/d/1s1fryOr9au8tX_dOFJLBT2biu0uBI_nh/view?usp=sharing">HTML Form Part1_Input and Labels </a></th>
+                   </tr>
+                   <tr>
+                    <th>11.</th>
+                    <th class="th-1"><a href="https://drive.google.com/file/d/14Q5R2-Kn_in4RMRR9BeLqYshdkDcltnG/view?usp=sharing">HTML Form _Radio Button</a></th>
+                   </tr>
+                   <tr>
+                    
+                    <th>12.</th>
+                    <th class="th-1"><a href="https://drive.google.com/file/d/1GpNyneoxWRIsO2eWJ6PLr_G2MmUacHT0/view?usp=sharing">HTML Form _Dropdown List </a></th>
+                   </tr>
+                   <tr>
+                    <th>13.</th>
+                    <th class="th-1"><a href="https://drive.google.com/file/d/1G_n-TDSwQCp5EENE766aeOzMf24PWIle/view?usp=drive_link">Div and Span Tag HTML</a></th>
+                   </tr>
+
+                </table>
+            </div>
+        
+        </div>
+        
+        </div>
+        <div class="quiz">
+            <h1>To Get The Certificate You Must Complete This Quiz</h1>
+            <img src="../static/assets/img/quiz.png" class="img-36" alt="">
+            <img src="../static/assets/img/quiz.png" class="img-37" alt="">
+            <div class="quiz-link">
+             <h3>To Get The Quiz Link Click Here </h3> 
+             <img src="../static/assets/img/arrow2.png" class="img-38" alt="">
+             <br>
+             <a href="https://forms.gle/6Znsg5h7Y8VZgaMu9">HTML Quiz </a>
+            </div>
+         </div>
+         <div class="certificate">
+            <h1>Click Here To Dowload Your Certificate</h1>
+            <img src="../static/assets/img/certificate.png" class="img-41" alt="">
+            <img src="../static/assets/img/certificate.png" class="img-42" alt="">
+            <div class="get-certificate">
+               <img src="../static/assets/img/arrow2.png" class="img-40" alt="">
+               <a href="{{url_for('generator')}}" class="btn-35">Certificate</a>
+
+            </div>
+         </div>
+         
+</body>
+</html>
