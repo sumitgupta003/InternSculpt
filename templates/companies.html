@@ -47,11 +47,7 @@
                     <option value="Information Technology Support">Information Technology Support</option>
                     <option value="Software Development">Software Development</option>
                     <option value="Management & Administration">Management & Administration</option>
-                    <option value="Management Consulting">Management Consulting</option>
-                    <!-- <option value="Customer Supports">Customer Supports</option> -->
-                    <!-- <option value="Network Solutions">Network Solutions</option> -->
-                    <option value="Business Consulting">Business Consulting</option>
-                    <option value="IT Services and Consulting">IT Services and Consulting</option>
+                    <option value="Marketing and Advertising">Marketing and Advertising</option>
 
                 </select>
 
@@ -116,7 +112,11 @@
             {% if filter%}
             {%for company in filter_companies%}
             <div class="filter-2a">
+                {% if company.id > 14: %}
+                <a href="{{company.c_link}}" style="text-decoration: none; color: black;">
+                {% else: %}
                 <a href="{{ url_for('job_description' ~ company.id) }}" style="text-decoration: none; color: black;">
+                {% endif %}
                     <img src="../static/assets/img/{{company.c_image}}" alt="">
                     <h2>{{company.c_name}}</h2>
                     <h4>{{company.c_rating}} <img src="../static/assets/img/star.png" alt=""></h4>
@@ -171,7 +171,7 @@
             {%else%}
             {%for company in all_the_companies%}
             <div class="filter-2a">
-                {% if company.id > 15: %}
+                {% if company.id > 14: %}
                 <a href="{{company.c_link}}" style="text-decoration: none; color: black;">
                 {% else: %}
                 <a href="{{ url_for('job_description' ~ company.id) }}" style="text-decoration: none; color: black;">
