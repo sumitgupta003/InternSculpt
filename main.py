@@ -402,7 +402,9 @@ def video_call():
 def generator():
     return render_template("indexofcert.html")
 
-
+@app.route("/copyright")
+def copyright():
+    return render_template("copyright.html")
 
 @app.route("/playlist")
 def playlist():
@@ -413,9 +415,9 @@ def playlist():
 def css_playlist():
     return render_template("lecture-1.html")
 
-@app.route("/react_playlist")
-def react_playlist():
-    return render_template("playlist-3.html")
+@app.route("/network_marketing_playlist")
+def network_marketing_playlist():
+    return render_template("lecture-2.html")
 
 
 if __name__ == '__main__':
