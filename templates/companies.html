@@ -171,7 +171,11 @@
             {%else%}
             {%for company in all_the_companies%}
             <div class="filter-2a">
+                {% if company.id > 15: %}
+                <a href="{{company.c_link}}" style="text-decoration: none; color: black;">
+                {% else: %}
                 <a href="{{ url_for('job_description' ~ company.id) }}" style="text-decoration: none; color: black;">
+                {% endif %}
                     <!-- <a href="{{url_for('job_description1')}}" style="text-decoration: none; color: black;"> -->
                     <img src="../static/assets/img/{{company.c_image}}" alt="">
                     <h2>{{company.c_name}}</h2>

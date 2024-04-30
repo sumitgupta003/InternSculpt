@@ -229,6 +229,8 @@ def one_star():
             else:
                 return render_template("companies.html", filter_not_available = True)
     all_companies = db.session.query(Companies).all()
+    # for com in all_companies:
+    #     print(com.c_link)
     return render_template("companies.html", all_the_companies = all_companies)
 
 
